@@ -1,6 +1,6 @@
+package com.higok.dao;
 import org.junit.Test;
 
-import com.higok.dao.DAOTestSupport;
 
 /**
  * @author xueqiang.mi

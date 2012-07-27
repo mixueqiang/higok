@@ -8,6 +8,8 @@ public interface Crawler {
 
   void getAndSaveLinks();
 
+  void getAndSaveProducts();
+
   String getSource();
 
   String getURL();

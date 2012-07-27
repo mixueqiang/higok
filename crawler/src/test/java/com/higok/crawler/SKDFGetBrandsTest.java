@@ -1,4 +1,4 @@
-package com.taobao.crawler.teset;
+package com.higok.crawler;
 
 import java.io.IOException;
 
@@ -23,7 +23,7 @@ import org.junit.Test;
  * @author xueqiang.mi
  * @since 2012-7-26
  */
-public class SKDFTest {
+public class SKDFGetBrandsTest {
 
   @Test
   public void testGetBrandsWithHtmlParser1() throws ParserException {
