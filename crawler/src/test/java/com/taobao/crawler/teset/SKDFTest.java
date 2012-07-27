@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import junit.framework.Assert;
 
+import org.apache.commons.lang.StringUtils;
 import org.htmlparser.Parser;
 import org.htmlparser.filters.AndFilter;
 import org.htmlparser.filters.CssSelectorNodeFilter;
@@ -14,6 +15,7 @@ import org.htmlparser.util.NodeList;
 import org.htmlparser.util.ParserException;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.junit.Test;
 
@@ -63,11 +65,29 @@ public class SKDFTest {
       Document doc = Jsoup.connect("http://www.skdutyfree.com/dutyfree/brand/brandMain").get();
       Elements elements = doc.select(".brd_slist a");
 
+      for (Element e : elements) {
+        System.out.println(e.attr("onclick"));
+      }
+
       Assert.assertEquals(210, elements.size());
       long time = System.currentTimeMillis() - start;
       sum += time;
     }
     System.out.println(sum / 10);
+  }
+
+  @Test
+  public void testGet() throws IOException {
+    Document doc = Jsoup.connect("http://www.skdutyfree.com/dutyfree/brand/brandMain").get();
+    Elements elements = doc.select(".brd_slist a");
+    Assert.assertEquals(210, elements.size());
+
+    for (Element e : elements) {
+      String[] ids = StringUtils.substringsBetween(e.attr("onclick"), "'", "'");
+      if (ids != null && ids.length > 0) {
+        System.out.println(ids[0]);
+      }
+    }
   }
 
 }
