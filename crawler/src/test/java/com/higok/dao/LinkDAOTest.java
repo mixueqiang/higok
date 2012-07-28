@@ -10,7 +10,7 @@ public class LinkDAOTest extends DAOTestSupport {
 
   @Test
   public void testInsert() {
-    linkDAO.insert("tes tlink", "test source");
+    linkDAO.addIfNotExist("tes tlink", "test source");
   }
 
 }

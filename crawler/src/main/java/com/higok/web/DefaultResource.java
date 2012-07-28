@@ -20,7 +20,6 @@ import com.sun.jersey.api.view.Viewable;
 @Component
 @Scope(BeanDefinition.SCOPE_SINGLETON)
 public class DefaultResource {
-
   private static final Log LOGGER = LogFactory.getLog(DefaultResource.class);
 
   @GET

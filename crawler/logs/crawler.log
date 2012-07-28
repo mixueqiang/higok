@@ -1,0 +1,433 @@
+17:04:26.273 [Timer-1] DEBUG com.higok.util.LogbackConfigListener - loaded slf4j configure file from D:\workspace_3.7\higok\crawler\src\main\webapp\WEB-INF\logback.xml
+17:04:26.273 [Timer-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization started
+17:04:26.320 [Timer-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Sat Jul 28 17:04:26 CST 2012]; root of context hierarchy
+17:04:26.351 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+17:04:26.367 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext-DAO.xml]
+17:04:26.382 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext-Quartz.xml]
+17:04:26.585 [Timer-1] INFO  o.s.b.f.s.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1b57890: defining beans [dataSource,jdbcTemplate,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,crawlerSK,linkDAO,defaultResource,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+17:04:26.648 [Timer-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 375 ms
+17:04:36.034 [Timer-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Closing Root WebApplicationContext: startup date [Sat Jul 28 17:04:26 CST 2012]; root of context hierarchy
+17:04:36.034 [Timer-1] INFO  o.s.b.f.s.DefaultListableBeanFactory - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1b57890: defining beans [dataSource,jdbcTemplate,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,crawlerSK,linkDAO,defaultResource,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+17:04:36.237 [Timer-1] DEBUG com.higok.util.LogbackConfigListener - loaded slf4j configure file from D:\workspace_3.7\higok\crawler\src\main\webapp\WEB-INF\logback.xml
+17:04:36.252 [Timer-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization started
+17:04:36.299 [Timer-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Sat Jul 28 17:04:36 CST 2012]; root of context hierarchy
+17:04:36.331 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+17:04:36.346 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext-DAO.xml]
+17:04:36.362 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext-Quartz.xml]
+17:04:36.565 [Timer-1] INFO  o.s.b.f.s.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1243f75: defining beans [dataSource,jdbcTemplate,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,crawlerSK,linkDAO,defaultResource,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+17:04:36.627 [Timer-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 375 ms
+17:04:46.044 [Timer-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Closing Root WebApplicationContext: startup date [Sat Jul 28 17:04:36 CST 2012]; root of context hierarchy
+17:04:46.044 [Timer-1] INFO  o.s.b.f.s.DefaultListableBeanFactory - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1243f75: defining beans [dataSource,jdbcTemplate,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,crawlerSK,linkDAO,defaultResource,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+17:04:46.232 [Timer-1] DEBUG com.higok.util.LogbackConfigListener - loaded slf4j configure file from D:\workspace_3.7\higok\crawler\src\main\webapp\WEB-INF\logback.xml
+17:04:46.247 [Timer-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization started
+17:04:46.279 [Timer-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Sat Jul 28 17:04:46 CST 2012]; root of context hierarchy
+17:04:46.326 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+17:04:46.341 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext-DAO.xml]
+17:04:46.357 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext-Quartz.xml]
+17:04:46.591 [Timer-1] INFO  o.s.b.f.s.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1801e5f: defining beans [dataSource,jdbcTemplate,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,crawlerSK,linkDAO,defaultResource,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+17:04:46.654 [Timer-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 407 ms
+17:05:36.098 [Timer-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Closing Root WebApplicationContext: startup date [Sat Jul 28 17:04:46 CST 2012]; root of context hierarchy
+17:05:36.098 [Timer-1] INFO  o.s.b.f.s.DefaultListableBeanFactory - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1801e5f: defining beans [dataSource,jdbcTemplate,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,crawlerSK,linkDAO,defaultResource,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+17:05:36.301 [Timer-1] DEBUG com.higok.util.LogbackConfigListener - loaded slf4j configure file from D:\workspace_3.7\higok\crawler\src\main\webapp\WEB-INF\logback.xml
+17:05:36.316 [Timer-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization started
+17:05:36.347 [Timer-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Sat Jul 28 17:05:36 CST 2012]; root of context hierarchy
+17:05:36.410 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+17:05:36.441 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext-DAO.xml]
+17:05:36.457 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext-Quartz.xml]
+17:05:36.675 [Timer-1] INFO  o.s.b.f.s.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1b3d1e5: defining beans [dataSource,jdbcTemplate,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,crawlerSK,linkDAO,defaultResource,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+17:05:36.754 [Timer-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 438 ms
+17:05:46.108 [Timer-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Closing Root WebApplicationContext: startup date [Sat Jul 28 17:05:36 CST 2012]; root of context hierarchy
+17:05:46.108 [Timer-1] INFO  o.s.b.f.s.DefaultListableBeanFactory - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1b3d1e5: defining beans [dataSource,jdbcTemplate,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,crawlerSK,linkDAO,defaultResource,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+17:05:46.311 [Timer-1] DEBUG com.higok.util.LogbackConfigListener - loaded slf4j configure file from D:\workspace_3.7\higok\crawler\src\main\webapp\WEB-INF\logback.xml
+17:05:46.311 [Timer-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization started
+17:05:46.358 [Timer-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Sat Jul 28 17:05:46 CST 2012]; root of context hierarchy
+17:05:46.389 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+17:05:46.421 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext-DAO.xml]
+17:05:46.436 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext-Quartz.xml]
+17:05:46.639 [Timer-1] ERROR o.s.web.context.ContextLoader - Context initialization failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Unexpected exception parsing XML document from ServletContext resource [/WEB-INF/applicationContext.xml]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'crawlerSK' for bean class [com.higok.crawler.impl.CrawlerSK] conflicts with existing, non-compatible bean definition of same name and class [com.higok.crawler.impl.CrawlerLotte]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:412) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:334) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:302) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:174) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:209) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125) ~[spring-web-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94) ~[spring-web-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:131) ~[spring-context-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:527) ~[spring-context-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:441) ~[spring-context-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:383) ~[spring-web-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:283) ~[spring-web-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111) [spring-web-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:540) [jetty-6.1.10.jar:6.1.10]
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:135) [jetty-6.1.10.jar:6.1.10]
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1220) [jetty-6.1.10.jar:6.1.10]
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:510) [jetty-6.1.10.jar:6.1.10]
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:448) [jetty-6.1.10.jar:6.1.10]
+	at org.mortbay.jetty.plugin.Jetty6PluginWebAppContext.doStart(Jetty6PluginWebAppContext.java:110) [maven-jetty-plugin-6.1.10.jar:6.1.10]
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:39) [jetty-util-6.1.10.jar:6.1.10]
+	at org.mortbay.jetty.plugin.AbstractJettyRunMojo$1.filesChanged(AbstractJettyRunMojo.java:409) [maven-jetty-plugin-6.1.10.jar:6.1.10]
+	at org.mortbay.util.Scanner.reportBulkChanges(Scanner.java:493) [jetty-util-6.1.10.jar:6.1.10]
+	at org.mortbay.util.Scanner.reportDifferences(Scanner.java:359) [jetty-util-6.1.10.jar:6.1.10]
+	at org.mortbay.util.Scanner.scan(Scanner.java:286) [jetty-util-6.1.10.jar:6.1.10]
+	at org.mortbay.util.Scanner$1.run(Scanner.java:246) [jetty-util-6.1.10.jar:6.1.10]
+	at java.util.TimerThread.mainLoop(Timer.java:512) [na:1.6.0_07]
+	at java.util.TimerThread.run(Timer.java:462) [na:1.6.0_07]
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'crawlerSK' for bean class [com.higok.crawler.impl.CrawlerSK] conflicts with existing, non-compatible bean definition of same name and class [com.higok.crawler.impl.CrawlerLotte]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:312) ~[spring-context-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:253) ~[spring-context-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.context.annotation.ComponentScanBeanDefinitionParser.parse(ComponentScanBeanDefinitionParser.java:84) ~[spring-context-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.xml.NamespaceHandlerSupport.parse(NamespaceHandlerSupport.java:73) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parseCustomElement(BeanDefinitionParserDelegate.java:1419) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parseCustomElement(BeanDefinitionParserDelegate.java:1409) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.parseBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:184) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.doRegisterBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:140) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.registerBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:111) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.registerBeanDefinitions(XmlBeanDefinitionReader.java:493) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:390) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	... 27 common frames omitted
+18:03:29.785 [Timer-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Closing Root WebApplicationContext: startup date [Sat Jul 28 17:05:46 CST 2012]; root of context hierarchy
+18:03:29.800 [Timer-1] WARN  o.s.w.c.s.XmlWebApplicationContext - Exception thrown from ApplicationListener handling ContextClosedEvent
+java.lang.IllegalStateException: ApplicationEventMulticaster not initialized - call 'refresh' before multicasting events via the context: Root WebApplicationContext: startup date [Sat Jul 28 17:05:46 CST 2012]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getApplicationEventMulticaster(AbstractApplicationContext.java:337) [spring-context-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:324) [spring-context-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1030) [spring-context-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:993) [spring-context-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.web.context.ContextLoader.closeWebApplicationContext(ContextLoader.java:548) [spring-web-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.web.context.ContextLoaderListener.contextDestroyed(ContextLoaderListener.java:142) [spring-web-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.mortbay.jetty.handler.ContextHandler.doStop(ContextHandler.java:574) [jetty-6.1.10.jar:6.1.10]
+	at org.mortbay.jetty.webapp.WebAppContext.doStop(WebAppContext.java:485) [jetty-6.1.10.jar:6.1.10]
+	at org.mortbay.jetty.plugin.Jetty6PluginWebAppContext.doStop(Jetty6PluginWebAppContext.java:118) [maven-jetty-plugin-6.1.10.jar:6.1.10]
+	at org.mortbay.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:64) [jetty-util-6.1.10.jar:6.1.10]
+	at org.mortbay.jetty.plugin.AbstractJettyRunMojo$1.filesChanged(AbstractJettyRunMojo.java:387) [maven-jetty-plugin-6.1.10.jar:6.1.10]
+	at org.mortbay.util.Scanner.reportBulkChanges(Scanner.java:493) [jetty-util-6.1.10.jar:6.1.10]
+	at org.mortbay.util.Scanner.reportDifferences(Scanner.java:359) [jetty-util-6.1.10.jar:6.1.10]
+	at org.mortbay.util.Scanner.scan(Scanner.java:286) [jetty-util-6.1.10.jar:6.1.10]
+	at org.mortbay.util.Scanner$1.run(Scanner.java:246) [jetty-util-6.1.10.jar:6.1.10]
+	at java.util.TimerThread.mainLoop(Timer.java:512) [na:1.6.0_07]
+	at java.util.TimerThread.run(Timer.java:462) [na:1.6.0_07]
+18:03:29.800 [Timer-1] WARN  o.s.w.c.s.XmlWebApplicationContext - Exception thrown from LifecycleProcessor on context close
+java.lang.IllegalStateException: LifecycleProcessor not initialized - call 'refresh' before invoking lifecycle methods via the context: Root WebApplicationContext: startup date [Sat Jul 28 17:05:46 CST 2012]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getLifecycleProcessor(AbstractApplicationContext.java:350) [spring-context-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1038) [spring-context-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:993) [spring-context-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.web.context.ContextLoader.closeWebApplicationContext(ContextLoader.java:548) [spring-web-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.web.context.ContextLoaderListener.contextDestroyed(ContextLoaderListener.java:142) [spring-web-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.mortbay.jetty.handler.ContextHandler.doStop(ContextHandler.java:574) [jetty-6.1.10.jar:6.1.10]
+	at org.mortbay.jetty.webapp.WebAppContext.doStop(WebAppContext.java:485) [jetty-6.1.10.jar:6.1.10]
+	at org.mortbay.jetty.plugin.Jetty6PluginWebAppContext.doStop(Jetty6PluginWebAppContext.java:118) [maven-jetty-plugin-6.1.10.jar:6.1.10]
+	at org.mortbay.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:64) [jetty-util-6.1.10.jar:6.1.10]
+	at org.mortbay.jetty.plugin.AbstractJettyRunMojo$1.filesChanged(AbstractJettyRunMojo.java:387) [maven-jetty-plugin-6.1.10.jar:6.1.10]
+	at org.mortbay.util.Scanner.reportBulkChanges(Scanner.java:493) [jetty-util-6.1.10.jar:6.1.10]
+	at org.mortbay.util.Scanner.reportDifferences(Scanner.java:359) [jetty-util-6.1.10.jar:6.1.10]
+	at org.mortbay.util.Scanner.scan(Scanner.java:286) [jetty-util-6.1.10.jar:6.1.10]
+	at org.mortbay.util.Scanner$1.run(Scanner.java:246) [jetty-util-6.1.10.jar:6.1.10]
+	at java.util.TimerThread.mainLoop(Timer.java:512) [na:1.6.0_07]
+	at java.util.TimerThread.run(Timer.java:462) [na:1.6.0_07]
+18:06:11.547 [Timer-1] DEBUG com.higok.util.LogbackConfigListener - loaded slf4j configure file from D:\workspace_3.7\higok\crawler\src\main\webapp\WEB-INF\logback.xml
+18:06:11.610 [Timer-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization started
+18:06:11.875 [Timer-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Sat Jul 28 18:06:11 CST 2012]; root of context hierarchy
+18:06:12.000 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+18:06:12.094 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext-DAO.xml]
+18:06:12.141 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext-Quartz.xml]
+18:06:12.328 [Timer-1] ERROR o.s.web.context.ContextLoader - Context initialization failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Unexpected exception parsing XML document from ServletContext resource [/WEB-INF/applicationContext.xml]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'crawlerSK' for bean class [com.higok.crawler.impl.CrawlerSK] conflicts with existing, non-compatible bean definition of same name and class [com.higok.crawler.impl.CrawlerLotte]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:412) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:334) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:302) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:174) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:209) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125) ~[spring-web-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94) ~[spring-web-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:131) ~[spring-context-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:527) ~[spring-context-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:441) ~[spring-context-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:383) ~[spring-web-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:283) ~[spring-web-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111) [spring-web-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:540) [jetty-6.1.10.jar:6.1.10]
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:135) [jetty-6.1.10.jar:6.1.10]
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1220) [jetty-6.1.10.jar:6.1.10]
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:510) [jetty-6.1.10.jar:6.1.10]
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:448) [jetty-6.1.10.jar:6.1.10]
+	at org.mortbay.jetty.plugin.Jetty6PluginWebAppContext.doStart(Jetty6PluginWebAppContext.java:110) [maven-jetty-plugin-6.1.10.jar:6.1.10]
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:39) [jetty-util-6.1.10.jar:6.1.10]
+	at org.mortbay.jetty.plugin.AbstractJettyRunMojo$1.filesChanged(AbstractJettyRunMojo.java:409) [maven-jetty-plugin-6.1.10.jar:6.1.10]
+	at org.mortbay.util.Scanner.reportBulkChanges(Scanner.java:493) [jetty-util-6.1.10.jar:6.1.10]
+	at org.mortbay.util.Scanner.reportDifferences(Scanner.java:359) [jetty-util-6.1.10.jar:6.1.10]
+	at org.mortbay.util.Scanner.scan(Scanner.java:286) [jetty-util-6.1.10.jar:6.1.10]
+	at org.mortbay.util.Scanner$1.run(Scanner.java:246) [jetty-util-6.1.10.jar:6.1.10]
+	at java.util.TimerThread.mainLoop(Timer.java:512) [na:1.6.0_07]
+	at java.util.TimerThread.run(Timer.java:462) [na:1.6.0_07]
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'crawlerSK' for bean class [com.higok.crawler.impl.CrawlerSK] conflicts with existing, non-compatible bean definition of same name and class [com.higok.crawler.impl.CrawlerLotte]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:312) ~[spring-context-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:253) ~[spring-context-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.context.annotation.ComponentScanBeanDefinitionParser.parse(ComponentScanBeanDefinitionParser.java:84) ~[spring-context-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.xml.NamespaceHandlerSupport.parse(NamespaceHandlerSupport.java:73) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parseCustomElement(BeanDefinitionParserDelegate.java:1419) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parseCustomElement(BeanDefinitionParserDelegate.java:1409) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.parseBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:184) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.doRegisterBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:140) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.registerBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:111) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.registerBeanDefinitions(XmlBeanDefinitionReader.java:493) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:390) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	... 27 common frames omitted
+18:07:30.071 [Timer-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Closing Root WebApplicationContext: startup date [Sat Jul 28 18:06:11 CST 2012]; root of context hierarchy
+18:07:30.071 [Timer-1] WARN  o.s.w.c.s.XmlWebApplicationContext - Exception thrown from ApplicationListener handling ContextClosedEvent
+java.lang.IllegalStateException: ApplicationEventMulticaster not initialized - call 'refresh' before multicasting events via the context: Root WebApplicationContext: startup date [Sat Jul 28 18:06:11 CST 2012]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getApplicationEventMulticaster(AbstractApplicationContext.java:337) [spring-context-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:324) [spring-context-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1030) [spring-context-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:993) [spring-context-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.web.context.ContextLoader.closeWebApplicationContext(ContextLoader.java:548) [spring-web-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.web.context.ContextLoaderListener.contextDestroyed(ContextLoaderListener.java:142) [spring-web-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.mortbay.jetty.handler.ContextHandler.doStop(ContextHandler.java:574) [jetty-6.1.10.jar:6.1.10]
+	at org.mortbay.jetty.webapp.WebAppContext.doStop(WebAppContext.java:485) [jetty-6.1.10.jar:6.1.10]
+	at org.mortbay.jetty.plugin.Jetty6PluginWebAppContext.doStop(Jetty6PluginWebAppContext.java:118) [maven-jetty-plugin-6.1.10.jar:6.1.10]
+	at org.mortbay.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:64) [jetty-util-6.1.10.jar:6.1.10]
+	at org.mortbay.jetty.plugin.AbstractJettyRunMojo$1.filesChanged(AbstractJettyRunMojo.java:387) [maven-jetty-plugin-6.1.10.jar:6.1.10]
+	at org.mortbay.util.Scanner.reportBulkChanges(Scanner.java:493) [jetty-util-6.1.10.jar:6.1.10]
+	at org.mortbay.util.Scanner.reportDifferences(Scanner.java:359) [jetty-util-6.1.10.jar:6.1.10]
+	at org.mortbay.util.Scanner.scan(Scanner.java:286) [jetty-util-6.1.10.jar:6.1.10]
+	at org.mortbay.util.Scanner$1.run(Scanner.java:246) [jetty-util-6.1.10.jar:6.1.10]
+	at java.util.TimerThread.mainLoop(Timer.java:512) [na:1.6.0_07]
+	at java.util.TimerThread.run(Timer.java:462) [na:1.6.0_07]
+18:07:30.071 [Timer-1] WARN  o.s.w.c.s.XmlWebApplicationContext - Exception thrown from LifecycleProcessor on context close
+java.lang.IllegalStateException: LifecycleProcessor not initialized - call 'refresh' before invoking lifecycle methods via the context: Root WebApplicationContext: startup date [Sat Jul 28 18:06:11 CST 2012]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getLifecycleProcessor(AbstractApplicationContext.java:350) [spring-context-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1038) [spring-context-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:993) [spring-context-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.web.context.ContextLoader.closeWebApplicationContext(ContextLoader.java:548) [spring-web-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.web.context.ContextLoaderListener.contextDestroyed(ContextLoaderListener.java:142) [spring-web-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.mortbay.jetty.handler.ContextHandler.doStop(ContextHandler.java:574) [jetty-6.1.10.jar:6.1.10]
+	at org.mortbay.jetty.webapp.WebAppContext.doStop(WebAppContext.java:485) [jetty-6.1.10.jar:6.1.10]
+	at org.mortbay.jetty.plugin.Jetty6PluginWebAppContext.doStop(Jetty6PluginWebAppContext.java:118) [maven-jetty-plugin-6.1.10.jar:6.1.10]
+	at org.mortbay.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:64) [jetty-util-6.1.10.jar:6.1.10]
+	at org.mortbay.jetty.plugin.AbstractJettyRunMojo$1.filesChanged(AbstractJettyRunMojo.java:387) [maven-jetty-plugin-6.1.10.jar:6.1.10]
+	at org.mortbay.util.Scanner.reportBulkChanges(Scanner.java:493) [jetty-util-6.1.10.jar:6.1.10]
+	at org.mortbay.util.Scanner.reportDifferences(Scanner.java:359) [jetty-util-6.1.10.jar:6.1.10]
+	at org.mortbay.util.Scanner.scan(Scanner.java:286) [jetty-util-6.1.10.jar:6.1.10]
+	at org.mortbay.util.Scanner$1.run(Scanner.java:246) [jetty-util-6.1.10.jar:6.1.10]
+	at java.util.TimerThread.mainLoop(Timer.java:512) [na:1.6.0_07]
+	at java.util.TimerThread.run(Timer.java:462) [na:1.6.0_07]
+18:12:00.561 [Timer-1] DEBUG com.higok.util.LogbackConfigListener - loaded slf4j configure file from D:\workspace_3.7\higok\crawler\src\main\webapp\WEB-INF\logback.xml
+18:12:00.576 [Timer-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization started
+18:12:00.608 [Timer-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Sat Jul 28 18:12:00 CST 2012]; root of context hierarchy
+18:12:00.654 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+18:12:00.686 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext-DAO.xml]
+18:12:00.701 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext-Quartz.xml]
+18:12:01.045 [Timer-1] INFO  o.s.b.f.s.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@a9fd96: defining beans [dataSource,jdbcTemplate,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,crawlerLotte,crawlerSK,linkDAO,defaultResource,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+18:12:01.107 [Timer-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 531 ms
+18:12:10.353 [Timer-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Closing Root WebApplicationContext: startup date [Sat Jul 28 18:12:00 CST 2012]; root of context hierarchy
+18:12:10.353 [Timer-1] INFO  o.s.b.f.s.DefaultListableBeanFactory - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@a9fd96: defining beans [dataSource,jdbcTemplate,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,crawlerLotte,crawlerSK,linkDAO,defaultResource,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+18:12:10.603 [Timer-1] DEBUG com.higok.util.LogbackConfigListener - loaded slf4j configure file from D:\workspace_3.7\higok\crawler\src\main\webapp\WEB-INF\logback.xml
+18:12:10.618 [Timer-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization started
+18:12:10.649 [Timer-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Sat Jul 28 18:12:10 CST 2012]; root of context hierarchy
+18:12:10.696 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+18:12:10.743 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext-DAO.xml]
+18:12:10.759 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext-Quartz.xml]
+18:12:11.102 [Timer-1] INFO  o.s.b.f.s.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@78d4e6: defining beans [dataSource,jdbcTemplate,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,crawlerLotte,crawlerSK,linkDAO,defaultResource,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+18:12:11.165 [Timer-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 547 ms
+18:12:30.390 [Timer-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Closing Root WebApplicationContext: startup date [Sat Jul 28 18:12:10 CST 2012]; root of context hierarchy
+18:12:30.390 [Timer-1] INFO  o.s.b.f.s.DefaultListableBeanFactory - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@78d4e6: defining beans [dataSource,jdbcTemplate,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,crawlerLotte,crawlerSK,linkDAO,defaultResource,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+18:12:30.717 [Timer-1] DEBUG com.higok.util.LogbackConfigListener - loaded slf4j configure file from D:\workspace_3.7\higok\crawler\src\main\webapp\WEB-INF\logback.xml
+18:12:30.733 [Timer-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization started
+18:12:30.796 [Timer-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Sat Jul 28 18:12:30 CST 2012]; root of context hierarchy
+18:12:30.842 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+18:12:30.905 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext-DAO.xml]
+18:12:30.936 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext-Quartz.xml]
+18:12:31.217 [Timer-1] INFO  o.s.b.f.s.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@795f24: defining beans [dataSource,jdbcTemplate,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,crawlerLotte,crawlerSK,linkDAO,defaultResource,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+18:12:31.280 [Timer-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 547 ms
+18:20:10.863 [Timer-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Closing Root WebApplicationContext: startup date [Sat Jul 28 18:12:30 CST 2012]; root of context hierarchy
+18:20:10.863 [Timer-1] INFO  o.s.b.f.s.DefaultListableBeanFactory - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@795f24: defining beans [dataSource,jdbcTemplate,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,crawlerLotte,crawlerSK,linkDAO,defaultResource,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+18:20:11.097 [Timer-1] DEBUG com.higok.util.LogbackConfigListener - loaded slf4j configure file from D:\workspace_3.7\higok\crawler\src\main\webapp\WEB-INF\logback.xml
+18:20:11.113 [Timer-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization started
+18:20:11.144 [Timer-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Sat Jul 28 18:20:11 CST 2012]; root of context hierarchy
+18:20:11.191 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+18:20:11.222 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext-DAO.xml]
+18:20:11.253 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext-Quartz.xml]
+18:20:11.534 [Timer-1] INFO  o.s.b.f.s.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@dd151f: defining beans [dataSource,jdbcTemplate,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,crawlerLotte,crawlerSK,linkDAO,defaultResource,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+18:20:11.628 [Timer-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 515 ms
+18:20:30.884 [Timer-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Closing Root WebApplicationContext: startup date [Sat Jul 28 18:20:11 CST 2012]; root of context hierarchy
+18:20:30.884 [Timer-1] INFO  o.s.b.f.s.DefaultListableBeanFactory - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@dd151f: defining beans [dataSource,jdbcTemplate,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,crawlerLotte,crawlerSK,linkDAO,defaultResource,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+18:20:31.134 [Timer-1] DEBUG com.higok.util.LogbackConfigListener - loaded slf4j configure file from D:\workspace_3.7\higok\crawler\src\main\webapp\WEB-INF\logback.xml
+18:20:31.149 [Timer-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization started
+18:20:31.181 [Timer-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Sat Jul 28 18:20:31 CST 2012]; root of context hierarchy
+18:20:31.228 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+18:20:31.259 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext-DAO.xml]
+18:20:31.274 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext-Quartz.xml]
+18:20:31.649 [Timer-1] INFO  o.s.b.f.s.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@d27bb0: defining beans [dataSource,jdbcTemplate,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,crawlerLotte,crawlerSK,linkDAO,defaultResource,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+18:20:31.712 [Timer-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 563 ms
+18:21:00.916 [Timer-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Closing Root WebApplicationContext: startup date [Sat Jul 28 18:20:31 CST 2012]; root of context hierarchy
+18:21:00.916 [Timer-1] INFO  o.s.b.f.s.DefaultListableBeanFactory - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@d27bb0: defining beans [dataSource,jdbcTemplate,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,crawlerLotte,crawlerSK,linkDAO,defaultResource,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+18:21:01.197 [Timer-1] DEBUG com.higok.util.LogbackConfigListener - loaded slf4j configure file from D:\workspace_3.7\higok\crawler\src\main\webapp\WEB-INF\logback.xml
+18:21:01.213 [Timer-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization started
+18:21:01.259 [Timer-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Sat Jul 28 18:21:01 CST 2012]; root of context hierarchy
+18:21:01.322 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+18:21:01.353 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext-DAO.xml]
+18:21:01.400 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext-Quartz.xml]
+18:21:01.900 [Timer-1] INFO  o.s.b.f.s.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@d02649: defining beans [dataSource,jdbcTemplate,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,crawlerLotte,crawlerSK,linkDAO,defaultResource,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+18:21:01.978 [Timer-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 765 ms
+18:22:11.006 [Timer-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Closing Root WebApplicationContext: startup date [Sat Jul 28 18:21:01 CST 2012]; root of context hierarchy
+18:22:11.006 [Timer-1] INFO  o.s.b.f.s.DefaultListableBeanFactory - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@d02649: defining beans [dataSource,jdbcTemplate,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,crawlerLotte,crawlerSK,linkDAO,defaultResource,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+18:22:11.240 [Timer-1] DEBUG com.higok.util.LogbackConfigListener - loaded slf4j configure file from D:\workspace_3.7\higok\crawler\src\main\webapp\WEB-INF\logback.xml
+18:22:11.256 [Timer-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization started
+18:22:11.303 [Timer-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Sat Jul 28 18:22:11 CST 2012]; root of context hierarchy
+18:22:11.349 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+18:22:11.381 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext-DAO.xml]
+18:22:11.396 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext-Quartz.xml]
+18:22:11.771 [Timer-1] INFO  o.s.b.f.s.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@5bf9cf: defining beans [dataSource,jdbcTemplate,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,crawlerLotte,crawlerSK,linkDAO,defaultResource,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+18:22:11.834 [Timer-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 578 ms
+18:27:11.309 [Timer-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Closing Root WebApplicationContext: startup date [Sat Jul 28 18:22:11 CST 2012]; root of context hierarchy
+18:27:11.309 [Timer-1] INFO  o.s.b.f.s.DefaultListableBeanFactory - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@5bf9cf: defining beans [dataSource,jdbcTemplate,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,crawlerLotte,crawlerSK,linkDAO,defaultResource,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+18:27:11.574 [Timer-1] DEBUG com.higok.util.LogbackConfigListener - loaded slf4j configure file from D:\workspace_3.7\higok\crawler\src\main\webapp\WEB-INF\logback.xml
+18:27:11.590 [Timer-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization started
+18:27:11.637 [Timer-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Sat Jul 28 18:27:11 CST 2012]; root of context hierarchy
+18:27:11.684 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+18:27:11.715 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext-DAO.xml]
+18:27:11.762 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext-Quartz.xml]
+18:27:12.496 [Timer-1] ERROR o.s.web.context.ContextLoader - Context initialization failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Unexpected exception parsing XML document from ServletContext resource [/WEB-INF/applicationContext.xml]; nested exception is java.lang.OutOfMemoryError: PermGen space
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:412) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:334) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:302) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:174) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:209) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125) ~[spring-web-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94) ~[spring-web-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:131) ~[spring-context-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:527) ~[spring-context-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:441) ~[spring-context-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:383) ~[spring-web-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:283) ~[spring-web-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111) [spring-web-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:540) [jetty-6.1.10.jar:6.1.10]
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:135) [jetty-6.1.10.jar:6.1.10]
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1220) [jetty-6.1.10.jar:6.1.10]
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:510) [jetty-6.1.10.jar:6.1.10]
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:448) [jetty-6.1.10.jar:6.1.10]
+	at org.mortbay.jetty.plugin.Jetty6PluginWebAppContext.doStart(Jetty6PluginWebAppContext.java:110) [maven-jetty-plugin-6.1.10.jar:6.1.10]
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:39) [jetty-util-6.1.10.jar:6.1.10]
+	at org.mortbay.jetty.plugin.AbstractJettyRunMojo$1.filesChanged(AbstractJettyRunMojo.java:409) [maven-jetty-plugin-6.1.10.jar:6.1.10]
+	at org.mortbay.util.Scanner.reportBulkChanges(Scanner.java:493) [jetty-util-6.1.10.jar:6.1.10]
+	at org.mortbay.util.Scanner.reportDifferences(Scanner.java:359) [jetty-util-6.1.10.jar:6.1.10]
+	at org.mortbay.util.Scanner.scan(Scanner.java:286) [jetty-util-6.1.10.jar:6.1.10]
+	at org.mortbay.util.Scanner$1.run(Scanner.java:246) [jetty-util-6.1.10.jar:6.1.10]
+	at java.util.TimerThread.mainLoop(Timer.java:512) [na:1.6.0_07]
+	at java.util.TimerThread.run(Timer.java:462) [na:1.6.0_07]
+java.lang.OutOfMemoryError: PermGen space
+	at org.springframework.context.config.ContextNamespaceHandler.init(ContextNamespaceHandler.java:37) ~[spring-context-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.xml.DefaultNamespaceHandlerResolver.resolve(DefaultNamespaceHandlerResolver.java:130) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parseCustomElement(BeanDefinitionParserDelegate.java:1414) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.xml.BeanDefinitionParserDelegate.parseCustomElement(BeanDefinitionParserDelegate.java:1409) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.parseBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:184) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.doRegisterBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:140) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.registerBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:111) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.registerBeanDefinitions(XmlBeanDefinitionReader.java:493) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:390) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:334) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:302) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:174) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:209) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180) ~[spring-beans-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:125) ~[spring-web-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.web.context.support.XmlWebApplicationContext.loadBeanDefinitions(XmlWebApplicationContext.java:94) ~[spring-web-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:131) ~[spring-context-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:527) ~[spring-context-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:441) ~[spring-context-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:383) ~[spring-web-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:283) ~[spring-web-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111) [spring-web-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.mortbay.jetty.handler.ContextHandler.startContext(ContextHandler.java:540) [jetty-6.1.10.jar:6.1.10]
+	at org.mortbay.jetty.servlet.Context.startContext(Context.java:135) [jetty-6.1.10.jar:6.1.10]
+	at org.mortbay.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1220) [jetty-6.1.10.jar:6.1.10]
+	at org.mortbay.jetty.handler.ContextHandler.doStart(ContextHandler.java:510) [jetty-6.1.10.jar:6.1.10]
+	at org.mortbay.jetty.webapp.WebAppContext.doStart(WebAppContext.java:448) [jetty-6.1.10.jar:6.1.10]
+	at org.mortbay.jetty.plugin.Jetty6PluginWebAppContext.doStart(Jetty6PluginWebAppContext.java:110) [maven-jetty-plugin-6.1.10.jar:6.1.10]
+	at org.mortbay.component.AbstractLifeCycle.start(AbstractLifeCycle.java:39) [jetty-util-6.1.10.jar:6.1.10]
+	at org.mortbay.jetty.plugin.AbstractJettyRunMojo$1.filesChanged(AbstractJettyRunMojo.java:409) [maven-jetty-plugin-6.1.10.jar:6.1.10]
+	at org.mortbay.util.Scanner.reportBulkChanges(Scanner.java:493) [jetty-util-6.1.10.jar:6.1.10]
+	at org.mortbay.util.Scanner.reportDifferences(Scanner.java:359) [jetty-util-6.1.10.jar:6.1.10]
+18:31:01.569 [Timer-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Closing Root WebApplicationContext: startup date [Sat Jul 28 18:27:11 CST 2012]; root of context hierarchy
+18:31:01.569 [Timer-1] WARN  o.s.w.c.s.XmlWebApplicationContext - Exception thrown from ApplicationListener handling ContextClosedEvent
+java.lang.IllegalStateException: ApplicationEventMulticaster not initialized - call 'refresh' before multicasting events via the context: Root WebApplicationContext: startup date [Sat Jul 28 18:27:11 CST 2012]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getApplicationEventMulticaster(AbstractApplicationContext.java:337) [spring-context-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:324) [spring-context-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1030) [spring-context-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:993) [spring-context-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.web.context.ContextLoader.closeWebApplicationContext(ContextLoader.java:548) [spring-web-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.web.context.ContextLoaderListener.contextDestroyed(ContextLoaderListener.java:142) [spring-web-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.mortbay.jetty.handler.ContextHandler.doStop(ContextHandler.java:574) [jetty-6.1.10.jar:6.1.10]
+	at org.mortbay.jetty.webapp.WebAppContext.doStop(WebAppContext.java:485) [jetty-6.1.10.jar:6.1.10]
+	at org.mortbay.jetty.plugin.Jetty6PluginWebAppContext.doStop(Jetty6PluginWebAppContext.java:118) [maven-jetty-plugin-6.1.10.jar:6.1.10]
+	at org.mortbay.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:64) [jetty-util-6.1.10.jar:6.1.10]
+	at org.mortbay.jetty.plugin.AbstractJettyRunMojo$1.filesChanged(AbstractJettyRunMojo.java:387) [maven-jetty-plugin-6.1.10.jar:6.1.10]
+	at org.mortbay.util.Scanner.reportBulkChanges(Scanner.java:493) [jetty-util-6.1.10.jar:6.1.10]
+	at org.mortbay.util.Scanner.reportDifferences(Scanner.java:359) [jetty-util-6.1.10.jar:6.1.10]
+	at org.mortbay.util.Scanner.scan(Scanner.java:286) [jetty-util-6.1.10.jar:6.1.10]
+	at org.mortbay.util.Scanner$1.run(Scanner.java:246) [jetty-util-6.1.10.jar:6.1.10]
+	at java.util.TimerThread.mainLoop(Timer.java:512) [na:1.6.0_07]
+	at java.util.TimerThread.run(Timer.java:462) [na:1.6.0_07]
+18:31:01.569 [Timer-1] WARN  o.s.w.c.s.XmlWebApplicationContext - Exception thrown from LifecycleProcessor on context close
+java.lang.IllegalStateException: LifecycleProcessor not initialized - call 'refresh' before invoking lifecycle methods via the context: Root WebApplicationContext: startup date [Sat Jul 28 18:27:11 CST 2012]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getLifecycleProcessor(AbstractApplicationContext.java:350) [spring-context-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1038) [spring-context-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:993) [spring-context-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.web.context.ContextLoader.closeWebApplicationContext(ContextLoader.java:548) [spring-web-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.springframework.web.context.ContextLoaderListener.contextDestroyed(ContextLoaderListener.java:142) [spring-web-3.1.2.RELEASE.jar:3.1.2.RELEASE]
+	at org.mortbay.jetty.handler.ContextHandler.doStop(ContextHandler.java:574) [jetty-6.1.10.jar:6.1.10]
+	at org.mortbay.jetty.webapp.WebAppContext.doStop(WebAppContext.java:485) [jetty-6.1.10.jar:6.1.10]
+	at org.mortbay.jetty.plugin.Jetty6PluginWebAppContext.doStop(Jetty6PluginWebAppContext.java:118) [maven-jetty-plugin-6.1.10.jar:6.1.10]
+	at org.mortbay.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:64) [jetty-util-6.1.10.jar:6.1.10]
+	at org.mortbay.jetty.plugin.AbstractJettyRunMojo$1.filesChanged(AbstractJettyRunMojo.java:387) [maven-jetty-plugin-6.1.10.jar:6.1.10]
+	at org.mortbay.util.Scanner.reportBulkChanges(Scanner.java:493) [jetty-util-6.1.10.jar:6.1.10]
+	at org.mortbay.util.Scanner.reportDifferences(Scanner.java:359) [jetty-util-6.1.10.jar:6.1.10]
+	at org.mortbay.util.Scanner.scan(Scanner.java:286) [jetty-util-6.1.10.jar:6.1.10]
+	at org.mortbay.util.Scanner$1.run(Scanner.java:246) [jetty-util-6.1.10.jar:6.1.10]
+	at java.util.TimerThread.mainLoop(Timer.java:512) [na:1.6.0_07]
+	at java.util.TimerThread.run(Timer.java:462) [na:1.6.0_07]
+18:31:12.688 [Timer-1] DEBUG com.higok.util.LogbackConfigListener - loaded slf4j configure file from D:\workspace_3.7\higok\crawler\src\main\webapp\WEB-INF\logback.xml
+18:31:12.688 [Timer-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization started
+18:31:12.735 [Timer-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Sat Jul 28 18:31:12 CST 2012]; root of context hierarchy
+18:31:12.782 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+18:31:12.813 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext-DAO.xml]
+18:31:12.845 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext-Quartz.xml]
+18:31:21.575 [Timer-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Closing Root WebApplicationContext: startup date [Sat Jul 28 18:31:12 CST 2012]; root of context hierarchy
+18:35:32.090 [Timer-1] DEBUG com.higok.util.LogbackConfigListener - loaded slf4j configure file from D:\workspace_3.7\higok\crawler\src\main\webapp\WEB-INF\logback.xml
+18:35:32.106 [Timer-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization started
+18:35:32.153 [Timer-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Sat Jul 28 18:35:32 CST 2012]; root of context hierarchy
+18:35:32.199 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+18:35:32.231 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext-DAO.xml]
+18:35:32.246 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext-Quartz.xml]
+18:36:11.898 [Timer-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Closing Root WebApplicationContext: startup date [Sat Jul 28 18:35:32 CST 2012]; root of context hierarchy
+18:38:42.292 [Timer-1] DEBUG com.higok.util.LogbackConfigListener - loaded slf4j configure file from D:\workspace_3.7\higok\crawler\src\main\webapp\WEB-INF\logback.xml
+18:38:42.292 [Timer-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization started
+18:38:42.339 [Timer-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Sat Jul 28 18:38:42 CST 2012]; root of context hierarchy
+18:38:42.386 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+18:38:42.417 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext-DAO.xml]
+18:38:42.433 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext-Quartz.xml]
+18:39:22.085 [Timer-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Closing Root WebApplicationContext: startup date [Sat Jul 28 18:38:42 CST 2012]; root of context hierarchy
+18:40:22.383 [Timer-1] DEBUG com.higok.util.LogbackConfigListener - loaded slf4j configure file from D:\workspace_3.7\higok\crawler\src\main\webapp\WEB-INF\logback.xml
+18:40:22.398 [Timer-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization started
+18:40:22.429 [Timer-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Sat Jul 28 18:40:22 CST 2012]; root of context hierarchy
+18:40:22.476 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+18:40:22.523 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext-DAO.xml]
+18:40:22.539 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext-Quartz.xml]
+18:40:32.159 [Timer-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Closing Root WebApplicationContext: startup date [Sat Jul 28 18:40:22 CST 2012]; root of context hierarchy
+18:40:52.414 [Timer-1] DEBUG com.higok.util.LogbackConfigListener - loaded slf4j configure file from D:\workspace_3.7\higok\crawler\src\main\webapp\WEB-INF\logback.xml
+18:40:52.430 [Timer-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization started
+18:40:52.477 [Timer-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Sat Jul 28 18:40:52 CST 2012]; root of context hierarchy
+18:40:52.508 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+18:40:52.555 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext-DAO.xml]
+18:40:52.571 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext-Quartz.xml]
+18:41:12.201 [Timer-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Closing Root WebApplicationContext: startup date [Sat Jul 28 18:40:52 CST 2012]; root of context hierarchy
+18:41:42.468 [Timer-1] DEBUG com.higok.util.LogbackConfigListener - loaded slf4j configure file from D:\workspace_3.7\higok\crawler\src\main\webapp\WEB-INF\logback.xml
+18:41:42.483 [Timer-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization started
+18:41:42.514 [Timer-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Sat Jul 28 18:41:42 CST 2012]; root of context hierarchy
+18:41:42.577 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+18:41:42.608 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext-DAO.xml]
+18:41:42.655 [Timer-1] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext-Quartz.xml]
+18:43:42.361 [Timer-1] INFO  o.s.w.c.s.XmlWebApplicationContext - Closing Root WebApplicationContext: startup date [Sat Jul 28 18:41:42 CST 2012]; root of context hierarchy

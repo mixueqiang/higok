@@ -20,8 +20,13 @@ public class CrawlerSKTest {
   protected CrawlerSK crawlerSK;
 
   @Test
-  public void test() {
-    crawlerSK.getAndSaveLinks();
+  public void testGetAndSaveCategories() {
+    crawlerSK.getAndSaveCategories();
+  }
+
+  @Test
+  public void testGetAndSaveItems() {
+    crawlerSK.getAndSaveItems();
   }
 
 }

@@ -5,7 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.higok.crawler.Crawler;
-import com.higok.dao.LinkDAO;
+import com.higok.dao.CategoryDAO;
+import com.higok.dao.ItemDAO;
 
 /**
  * @author xueqiang.mi
@@ -14,18 +15,35 @@ import com.higok.dao.LinkDAO;
 public abstract class BaseCrawler implements Crawler {
 
   @Autowired
-  protected LinkDAO linkDAO;
+  protected CategoryDAO categoryDAO;
+  @Autowired
+  protected ItemDAO itemDAO;
 
-  public abstract List<String> getLinks();
+  public abstract List<String> getCategories();
 
-  public void getAndSaveLinks() {
-    List<String> links = getLinks();
-    if (links == null) {
+  public abstract List<String> getItems();
+
+  @Override
+  public void getAndSaveCategories() {
+    List<String> brands = getCategories();
+    if (brands == null) {
       return;
     }
 
-    for (String link : links) {
-      linkDAO.insert(link, getSource());
+    for (String brand : brands) {
+      categoryDAO.addIfNotExist(getSource(), brand);
+    }
+  }
+
+  @Override
+  public void getAndSaveItems() {
+    List<String> items = getItems();
+    if (items == null || items.isEmpty()) {
+      return;
+    }
+
+    for (String item : items) {
+      itemDAO.addIfNotExist(getSource(), item);
     }
   }
 

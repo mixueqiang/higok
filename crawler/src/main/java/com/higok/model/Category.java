@@ -6,21 +6,17 @@ import java.io.Serializable;
  * @author xueqiang.mi
  * @since 2012-7-27
  */
-public class Link implements Serializable {
-
+public class Category implements Serializable {
   private static final long serialVersionUID = -1902517544472403760L;
 
   private long id;
-  private String link;
   private String source;
+  private String brand_id;
+  private String category_id;
   private boolean status;
 
   public long getId() {
     return id;
-  }
-
-  public String getLink() {
-    return link;
   }
 
   public String getSource() {
@@ -35,10 +31,6 @@ public class Link implements Serializable {
     this.id = id;
   }
 
-  public void setLink(String link) {
-    this.link = link;
-  }
-
   public void setSource(String source) {
     this.source = source;
   }
@@ -47,8 +39,26 @@ public class Link implements Serializable {
     this.status = status;
   }
 
+  public String getBrand_id() {
+    return brand_id;
+  }
+
+  public void setBrand_id(String brand_id) {
+    this.brand_id = brand_id;
+  }
+
+  public String getCategory_id() {
+    return category_id;
+  }
+
+  public void setCategory_id(String category_id) {
+    this.category_id = category_id;
+  }
+
   @Override
   public String toString() {
-    return "Link [id=" + id + ", link=" + link + ", source=" + source + ", status=" + status + "]";
+    return "Category [id=" + id + ", source=" + source + ", brand_id=" + brand_id + ", category_id=" + category_id
+        + ", status=" + status + "]";
   }
+
 }

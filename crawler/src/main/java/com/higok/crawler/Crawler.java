@@ -6,12 +6,10 @@ package com.higok.crawler;
  */
 public interface Crawler {
 
-  void getAndSaveLinks();
+  void getAndSaveCategories();
 
-  void getAndSaveProducts();
+  void getAndSaveItems();
 
   String getSource();
-
-  String getURL();
 
 }
