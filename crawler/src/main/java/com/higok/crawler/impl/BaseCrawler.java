@@ -1,5 +1,6 @@
 package com.higok.crawler.impl;
 
+import java.text.MessageFormat;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,6 +46,10 @@ public abstract class BaseCrawler implements Crawler {
     for (String item : items) {
       itemDAO.addIfNotExist(getSource(), item);
     }
+  }
+
+  protected static String buildURL(String pattern, Object... objects) {
+    return MessageFormat.format(pattern, objects);
   }
 
 }

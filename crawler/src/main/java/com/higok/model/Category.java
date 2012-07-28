@@ -11,9 +11,17 @@ public class Category implements Serializable {
 
   private long id;
   private String source;
-  private String brand_id;
-  private String category_id;
+  private String brandId;
+  private String categoryId;
   private boolean status;
+
+  public String getBrandId() {
+    return brandId;
+  }
+
+  public String getCategoryId() {
+    return categoryId;
+  }
 
   public long getId() {
     return id;
@@ -25,6 +33,14 @@ public class Category implements Serializable {
 
   public boolean isStatus() {
     return status;
+  }
+
+  public void setBrandId(String brandId) {
+    this.brandId = brandId;
+  }
+
+  public void setCategoryId(String categoryId) {
+    this.categoryId = categoryId;
   }
 
   public void setId(long id) {
@@ -39,25 +55,9 @@ public class Category implements Serializable {
     this.status = status;
   }
 
-  public String getBrand_id() {
-    return brand_id;
-  }
-
-  public void setBrand_id(String brand_id) {
-    this.brand_id = brand_id;
-  }
-
-  public String getCategory_id() {
-    return category_id;
-  }
-
-  public void setCategory_id(String category_id) {
-    this.category_id = category_id;
-  }
-
   @Override
   public String toString() {
-    return "Category [id=" + id + ", source=" + source + ", brand_id=" + brand_id + ", category_id=" + category_id
+    return "Category [id=" + id + ", source=" + source + ", brandId=" + brandId + ", categoryId=" + categoryId
         + ", status=" + status + "]";
   }
 

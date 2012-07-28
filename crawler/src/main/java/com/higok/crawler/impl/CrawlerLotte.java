@@ -25,12 +25,7 @@ public class CrawlerLotte extends BaseCrawler implements Crawler {
   private static final Log LOGGER = LogFactory.getLog(CrawlerLotte.class);
 
   private static final String START_URL = "http://www.lottedfs.com/handler/BrandShop-Main?brandId=0501";
-  private static final String CATEGORY_URL_PREFIX = "http://www.lottedfs.com/handler/BrandShop-Main?brandId=";
-
-  @Override
-  public String getSource() {
-    return Constants.LOTTE_SOURCE;
-  }
+  private static final String URL_PATTERN_CATEGORY = "http://www.lottedfs.com/handler/BrandShop-Main?brandId={0}";
 
   @Override
   public List<String> getCategories() {
@@ -52,10 +47,16 @@ public class CrawlerLotte extends BaseCrawler implements Crawler {
   }
 
   @Override
+  public void getItemDetail() {
+    // TODO Auto-generated method stub
+
+  }
+
+  @Override
   public List<String> getItems() {
     Category cat = categoryDAO.getCategoryNeedToUpdated(getSource());
     try {
-      String link = CATEGORY_URL_PREFIX + cat.getBrand_id();
+      String link = buildURL(URL_PATTERN_CATEGORY, cat.getBrandId());
       Document doc = Jsoup.connect(link).get();
       Elements elements = doc.select(".prodImg .photo a");
       List<String> items = new ArrayList<String>();
@@ -70,6 +71,11 @@ public class CrawlerLotte extends BaseCrawler implements Crawler {
       LOGGER.error("Error on get items from " + getSource(), e);
     }
     return null;
+  }
+
+  @Override
+  public String getSource() {
+    return Constants.LOTTE_SOURCE;
   }
 
 }

@@ -1,6 +1,6 @@
 package com.higok.dao;
 
-import com.higok.model.Category;
+import com.higok.model.Item;
 
 /**
  * @author xueqiang.mi
@@ -10,6 +10,6 @@ public interface ItemDAO {
 
   void addIfNotExist(String source, String itemId);
 
-  Category getItemNeedToUpdate(String source);
+  Item getItemNeedToUpdate(String source);
 
 }

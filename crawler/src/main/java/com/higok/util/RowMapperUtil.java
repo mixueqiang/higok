@@ -20,8 +20,8 @@ public class RowMapperUtil {
       Category obj = new Category();
       obj.setId(rs.getLong("id"));
       obj.setSource(rs.getString("source"));
-      obj.setBrand_id(rs.getString("brand_id"));
-      obj.setCategory_id(rs.getString("category_id"));
+      obj.setBrandId(rs.getString("brand_id"));
+      obj.setCategoryId(rs.getString("category_id"));
       obj.setStatus(rs.getBoolean("status"));
       return obj;
     }
@@ -31,6 +31,11 @@ public class RowMapperUtil {
     @Override
     public Item mapRow(ResultSet rs, int rowNum) throws SQLException {
       Item obj = new Item();
+      obj.setId(rs.getLong("id"));
+      obj.setSource(rs.getString("source"));
+      obj.setItemId(rs.getString("item_id"));
+      obj.setLink(rs.getString("link"));
+      obj.setStatus(rs.getBoolean("status"));
       return obj;
     }
   };
