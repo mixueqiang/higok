@@ -62,7 +62,7 @@ public class CrawlerSK extends BaseCrawler implements Crawler {
       Element itemInfo = elements.get(0);
       String cat1 = doc.select("#slctOneDepthCategory option[selected]").text().trim();
       String cat2 = doc.select("#slctTwoDepthCategory option[selected]").text().trim();
-      String brandName = itemInfo.select("dd:eq(0)").text().trim();
+      String brandName = itemInfo.select("dd:eq(1)").get(0).text().trim();
       String title = itemInfo.select(".pname").text().trim();
       String price = "";
       elements = itemInfo.select(".price dd");
@@ -75,13 +75,7 @@ public class CrawlerSK extends BaseCrawler implements Crawler {
       }
       price = StringUtils.substringBefore(price, "(").trim();
       String media = doc.select(".prod_main_info .img_info #prod_img img").attr("src");
-      System.out.println(cat1);
-      System.out.println(cat2);
-      System.out.println(brandName);
-      System.out.println(title);
-      System.out.println(price);
-      System.out.println(link);
-      System.out.println(media);
+      submitItemDetail(cat1, cat2, brandName, title, price, link, media);
     } catch (Exception e) {
       LOGGER.error("Error on get item detail: " + getSource() + "-" + item.getId(), e);
     }
