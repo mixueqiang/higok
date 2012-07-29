@@ -29,4 +29,9 @@ public class CrawlerSKTest {
     crawlerSK.getAndSaveItems();
   }
 
+  @Test
+  public void testGetItemDetails() {
+    crawlerSK.getItemDetail();
+  }
+
 }
