@@ -49,41 +49,48 @@ public class CrawlerSK extends BaseCrawler implements Crawler {
   }
 
   @Override
-  public void getItemDetail() {
-    Item item = itemDAO.getItemNeedToUpdate(getSource());
-    String link = buildURL(URL_PATTERN_ITEM, item.getItemId());
-    try {
-      Document doc = Jsoup.connect(link).get();
-      Elements elements = doc.select(".prod_main_info .txt_info");
-      if (elements.size() != 1) {
-        return;
-      }
+  public void getItemsDetail() {
+    List<Item> items = itemDAO.getItemsNeedToUpdate(getSource(), DEFAULT_SIZE);
+    if (items == null || items.isEmpty()) {
+      return;
+    }
 
-      Element itemInfo = elements.get(0);
-      String cat1 = doc.select("#slctOneDepthCategory option[selected]").text().trim();
-      String cat2 = doc.select("#slctTwoDepthCategory option[selected]").text().trim();
-      String brandName = itemInfo.select("dd:eq(1)").get(0).text().trim();
-      String title = itemInfo.select(".pname").text().trim();
-      String price = "";
-      elements = itemInfo.select(".price dd");
-      for (Element e : elements) {
-        if (e.select("del").size() > 0 || "innetCostBtn".equals(e.attr("id"))) {
-          continue;
+    for (Item item : items) {
+      String itemId = item.getItemId();
+      String link = buildURL(URL_PATTERN_ITEM, itemId);
+      try {
+        Document doc = Jsoup.connect(link).get();
+        Elements elements = doc.select(".prod_main_info .txt_info");
+        if (elements.size() != 1) {
+          return;
         }
 
-        price = e.text();
+        Element itemInfo = elements.get(0);
+        String cat1 = doc.select("#slctOneDepthCategory option[selected]").text().trim();
+        String cat2 = doc.select("#slctTwoDepthCategory option[selected]").text().trim();
+        String brandName = itemInfo.select("dd:eq(1)").get(0).text().trim();
+        String title = itemInfo.select(".pname").text().trim();
+        String price = "";
+        elements = itemInfo.select(".price dd");
+        for (Element e : elements) {
+          if (e.select("del").size() > 0 || "innetCostBtn".equals(e.attr("id"))) {
+            continue;
+          }
+
+          price = e.text();
+        }
+        price = StringUtils.substringBefore(price, "(").trim();
+        String media = doc.select(".prod_main_info .img_info #prod_img img").attr("src");
+        submitItemDetail(cat1, cat2, brandName, title, price, link, media);
+        itemDAO.updateStatus(item.getId());
+      } catch (Exception e) {
+        LOGGER.error("Error on get item detail: " + link, e);
       }
-      price = StringUtils.substringBefore(price, "(").trim();
-      String media = doc.select(".prod_main_info .img_info #prod_img img").attr("src");
-      submitItemDetail(cat1, cat2, brandName, title, price, link, media);
-    } catch (Exception e) {
-      LOGGER.error("Error on get item detail: " + getSource() + "-" + item.getId(), e);
     }
   }
 
   @Override
-  public List<String> getItems() {
-    Category cat = categoryDAO.getCategoryNeedToUpdated(getSource());
+  public List<String> getItemsOnCategory(final Category cat) {
     String link = buildURL(URL_PATTERN_CATEGORY, cat.getBrandId());
     try {
       Document doc = Jsoup.connect(link).get();
@@ -97,7 +104,7 @@ public class CrawlerSK extends BaseCrawler implements Crawler {
       }
       return items;
     } catch (Exception e) {
-      LOGGER.error("Error on get items from " + getSource(), e);
+      LOGGER.error("Error on get items from: " + link, e);
     }
     return null;
   }

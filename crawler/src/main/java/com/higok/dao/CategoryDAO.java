@@ -1,5 +1,7 @@
 package com.higok.dao;
 
+import java.util.List;
+
 import com.higok.model.Category;
 
 /**
@@ -10,6 +12,8 @@ public interface CategoryDAO {
 
   void addIfNotExist(String source, String brandId);
 
-  Category getCategoryNeedToUpdated(String source);
+  List<Category> getCategoriesNeedToUpdated(String source, int size);
+
+  void updateStatus(long catId);
 
 }

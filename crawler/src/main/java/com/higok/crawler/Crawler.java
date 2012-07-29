@@ -10,7 +10,7 @@ public interface Crawler {
 
   void getAndSaveItems();
 
-  void getItemDetail();
+  void getItemsDetail();
 
   String getSource();
 

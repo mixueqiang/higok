@@ -47,14 +47,13 @@ public class CrawlerLotte extends BaseCrawler implements Crawler {
   }
 
   @Override
-  public void getItemDetail() {
+  public void getItemsDetail() {
     // TODO Auto-generated method stub
 
   }
 
   @Override
-  public List<String> getItems() {
-    Category cat = categoryDAO.getCategoryNeedToUpdated(getSource());
+  public List<String> getItemsOnCategory(final Category cat) {
     try {
       String link = buildURL(URL_PATTERN_CATEGORY, cat.getBrandId());
       Document doc = Jsoup.connect(link).get();

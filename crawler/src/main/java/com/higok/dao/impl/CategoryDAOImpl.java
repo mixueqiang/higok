@@ -1,6 +1,7 @@
 package com.higok.dao.impl;
 
 import java.util.Calendar;
+import java.util.List;
 
 import org.springframework.stereotype.Component;
 
@@ -28,14 +29,17 @@ public class CategoryDAOImpl extends BaseDAO implements CategoryDAO {
   }
 
   @Override
-  public Category getCategoryNeedToUpdated(final String source) {
-    Category cat = jdbcTemplate.queryForObject(
-        "SELECT * FROM categories WHERE source = ? ORDER BY updated_date, id limit 0,1", new Object[] { source },
-        RowMapperUtil.CATEGORY_ROW_MAPPER);
-    jdbcTemplate.update("UPDATE categories SET updated_date = ? WHERE id = ?", new Object[] {
-        Calendar.getInstance().getTimeInMillis() / 1000, cat.getId() });
+  public List<Category> getCategoriesNeedToUpdated(final String source, final int size) {
+    List<Category> cats = jdbcTemplate.query(
+        "SELECT * FROM categories WHERE source = ? AND status = 1 ORDER BY updated_date, id limit 0, ?", new Object[] {
+            source, size }, RowMapperUtil.CATEGORY_ROW_MAPPER);
+    return cats;
+  }
 
-    return cat;
+  @Override
+  public void updateStatus(final long id) {
+    jdbcTemplate.update("UPDATE categories SET status = 0, updated_date = ? WHERE id = ?", new Object[] {
+        Calendar.getInstance().getTimeInMillis() / 1000, id });
   }
 
 }

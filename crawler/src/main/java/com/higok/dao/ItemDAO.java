@@ -1,5 +1,7 @@
 package com.higok.dao;
 
+import java.util.List;
+
 import com.higok.model.Item;
 
 /**
@@ -10,6 +12,8 @@ public interface ItemDAO {
 
   void addIfNotExist(String source, String itemId);
 
-  Item getItemNeedToUpdate(String source);
+  List<Item> getItemsNeedToUpdate(String source, int size);
+
+  void updateStatus(long itemId);
 
 }

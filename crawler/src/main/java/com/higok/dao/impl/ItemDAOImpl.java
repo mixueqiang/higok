@@ -1,6 +1,7 @@
 package com.higok.dao.impl;
 
 import java.util.Calendar;
+import java.util.List;
 
 import org.springframework.stereotype.Component;
 
@@ -27,14 +28,17 @@ public class ItemDAOImpl extends BaseDAO implements ItemDAO {
   }
 
   @Override
-  public Item getItemNeedToUpdate(String source) {
-    Item item = jdbcTemplate.queryForObject(
-        "SELECT * FROM items WHERE source = ? AND status = 1 ORDER BY updated_date, id limit 0,1",
-        new Object[] { source }, RowMapperUtil.ITEM_ROW_MAPPER);
-    jdbcTemplate.update("UPDATE items SET status = 0, updated_date = ? WHERE id = ?", new Object[] {
-        Calendar.getInstance().getTimeInMillis() / 1000, item.getId() });
+  public List<Item> getItemsNeedToUpdate(final String source, final int size) {
+    List<Item> items = jdbcTemplate.query(
+        "SELECT * FROM items WHERE source = ? AND status = 1 ORDER BY updated_date, id limit 0, ?", new Object[] {
+            source, size }, RowMapperUtil.ITEM_ROW_MAPPER);
+    return items;
+  }
 
-    return item;
+  @Override
+  public void updateStatus(final long id) {
+    jdbcTemplate.update("UPDATE items SET status = 0, updated_date = ? WHERE id = ?", new Object[] {
+        Calendar.getInstance().getTimeInMillis() / 1000, id });
   }
 
 }

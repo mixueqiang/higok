@@ -23,6 +23,7 @@ import com.higok.Constants;
 import com.higok.crawler.Crawler;
 import com.higok.dao.CategoryDAO;
 import com.higok.dao.ItemDAO;
+import com.higok.model.Category;
 import com.higok.util.TypeUtils;
 
 /**
@@ -31,6 +32,7 @@ import com.higok.util.TypeUtils;
  */
 public abstract class BaseCrawler implements Crawler {
   private static final Log LOGGER = LogFactory.getLog(BaseCrawler.class);
+  protected static final int DEFAULT_SIZE = 5;
 
   @Autowired
   protected CategoryDAO categoryDAO;
@@ -39,7 +41,7 @@ public abstract class BaseCrawler implements Crawler {
 
   public abstract List<String> getCategories();
 
-  public abstract List<String> getItems();
+  public abstract List<String> getItemsOnCategory(Category cat);
 
   @Override
   public void getAndSaveCategories() {
@@ -55,13 +57,21 @@ public abstract class BaseCrawler implements Crawler {
 
   @Override
   public void getAndSaveItems() {
-    List<String> items = getItems();
-    if (items == null || items.isEmpty()) {
+    List<Category> cats = categoryDAO.getCategoriesNeedToUpdated(getSource(), DEFAULT_SIZE);
+    if (cats == null || cats.isEmpty()) {
       return;
     }
 
-    for (String item : items) {
-      itemDAO.addIfNotExist(getSource(), item);
+    for (Category cat : cats) {
+      List<String> items = getItemsOnCategory(cat);
+      if (items == null || items.isEmpty()) {
+        return;
+      }
+
+      for (String item : items) {
+        itemDAO.addIfNotExist(getSource(), item);
+      }
+      categoryDAO.updateStatus(cat.getId());
     }
   }
 
