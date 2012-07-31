@@ -20,13 +20,13 @@ public class CrawlerLotteTest {
   protected CrawlerLotte crawlerLotte;
 
   @Test
-  public void testGetAndSaveCategories() {
-    crawlerLotte.getAndSaveCategories();
+  public void testGetCategories() {
+    crawlerLotte.retrieveCategories();
   }
 
   @Test
-  public void testGetAndSaveItems() {
-    crawlerLotte.getAndSaveItems();
+  public void testGetItems() {
+    crawlerLotte.retrieveItems();
   }
 
 }

@@ -2,6 +2,7 @@ package com.higok.crawler.impl;
 
 import java.text.MessageFormat;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
@@ -24,58 +25,28 @@ import com.higok.crawler.Crawler;
 import com.higok.dao.CategoryDAO;
 import com.higok.dao.ItemDAO;
 import com.higok.model.Category;
+import com.higok.model.Item;
 import com.higok.util.TypeUtils;
 
 /**
  * @author xueqiang.mi
  * @since 2012-7-27
  */
-public abstract class BaseCrawler implements Crawler {
-  private static final Log LOGGER = LogFactory.getLog(BaseCrawler.class);
-  protected static final int DEFAULT_SIZE = 5;
+public abstract class BaseDFSCrawler implements Crawler {
+  private static final Log LOGGER = LogFactory.getLog(BaseDFSCrawler.class);
 
-  @Autowired
-  protected CategoryDAO categoryDAO;
-  @Autowired
-  protected ItemDAO itemDAO;
+  protected static final int SIZE_SMALL = 3;
+  protected static final int SIZE_MEDIUM = 8;
+  protected static final int SIZE_LARGE = 20;
 
-  public abstract List<String> getCategories();
-
-  public abstract List<String> getItemsOnCategory(Category cat);
-
-  @Override
-  public void getAndSaveCategories() {
-    List<String> brands = getCategories();
-    if (brands == null) {
-      return;
-    }
-
-    for (String brand : brands) {
-      categoryDAO.addIfNotExist(getSource(), brand);
-    }
+  protected static String buildURL(String pattern, Object... objects) {
+    return MessageFormat.format(pattern, objects);
   }
 
-  @Override
-  public void getAndSaveItems() {
-    List<Category> cats = categoryDAO.getCategoriesNeedToUpdated(getSource(), DEFAULT_SIZE);
-    if (cats == null || cats.isEmpty()) {
-      return;
-    }
-
-    for (Category cat : cats) {
-      List<String> items = getItemsOnCategory(cat);
-      if (items == null || items.isEmpty()) {
-        return;
-      }
-
-      for (String item : items) {
-        itemDAO.addIfNotExist(getSource(), item);
-      }
-      categoryDAO.updateStatus(cat.getId());
-    }
-  }
-
-  protected boolean submitItemDetail(String cat1, String cat2, String brandName, String title, String price,
+  /**
+   * 向Higok.com提交数据。
+   */
+  protected static boolean submitItemDetail(String cat1, String cat2, String brandName, String title, String price,
       String url, String media) {
     HttpClient httpclient = new DefaultHttpClient();
     HttpParams params = httpclient.getParams();
@@ -93,7 +64,8 @@ public abstract class BaseCrawler implements Crawler {
     nameValuePairs.add(new BasicNameValuePair("media", media));
 
     try {
-      httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
+      // TODO 这里设置的编码格式可能需要根据网站不同有所调整。
+      httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs, "UTF-8"));
       HttpResponse httpResponse = httpclient.execute(httpPost);
 
       if (httpResponse.getStatusLine().getStatusCode() == 200) {
@@ -109,8 +81,63 @@ public abstract class BaseCrawler implements Crawler {
     return false;
   }
 
-  protected static String buildURL(String pattern, Object... objects) {
-    return MessageFormat.format(pattern, objects);
+  @Autowired
+  protected CategoryDAO categoryDAO;
+
+  @Autowired
+  protected ItemDAO itemDAO;
+
+  @Override
+  public void retrieveCategories() {
+    Collection<String> brands = readCategories();
+    if (brands == null) {
+      return;
+    }
+
+    for (String brand : brands) {
+      categoryDAO.addIfNotExist(getSource(), brand);
+    }
   }
 
+  @Override
+  public void retrieveItems() {
+    List<Item> items = itemDAO.getItemsNeedToUpdate(getSource(), SIZE_MEDIUM);
+    if (items == null || items.isEmpty()) {
+      // 当数据库中已经没有新的itemId时，执行抓取itemId的任务。
+      retrieveNewItemIds();
+      return;
+    }
+
+    for (Item item : items) {
+      retrieveItemDetails(item);
+    }
+  }
+
+  public abstract Collection<String> readCategories();
+
+  public abstract void retrieveItemDetails(Item item);
+
+  public abstract Collection<String> retrieveItemIds(Category cat);
+
+  private boolean retrieveNewItemIds() {
+    List<Category> cats = categoryDAO.getCategoriesNeedToUpdated(getSource(), SIZE_SMALL);
+    if (cats == null || cats.isEmpty()) {
+      // 当数据库中已经没有新的品牌或类别时，执行抓取品牌或类别的任务。
+      retrieveCategories();
+      return false;
+    }
+
+    boolean added = false;
+    for (Category cat : cats) {
+      Collection<String> items = retrieveItemIds(cat);
+      if (items != null && !items.isEmpty()) {
+        added = true;
+        for (String item : items) {
+          itemDAO.addIfNotExist(getSource(), item);
+        }
+        categoryDAO.updateStatus(cat.getId());
+      }
+    }
+    return added;
+  }
 }

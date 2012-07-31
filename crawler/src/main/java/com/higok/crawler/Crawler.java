@@ -6,12 +6,18 @@ package com.higok.crawler;
  */
 public interface Crawler {
 
-  void getAndSaveCategories();
+  void retrieveCategories();
 
-  void getAndSaveItems();
+  /**
+   * 抓取商品信息并保存到数据库。
+   */
+  void retrieveItems();
 
-  void getItemsDetail();
-
+  /**
+   * 该爬虫负责爬取的来源
+   * 
+   * @return 网站名称、简称等。
+   */
   String getSource();
 
 }

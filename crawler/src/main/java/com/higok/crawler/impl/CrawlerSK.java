@@ -1,7 +1,8 @@
 package com.higok.crawler.impl;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
@@ -22,7 +23,7 @@ import com.higok.model.Item;
  * @since 2012-7-27
  */
 @Component("crawlerSK")
-public class CrawlerSK extends BaseCrawler implements Crawler {
+public class CrawlerSK extends BaseDFSCrawler implements Crawler {
   private static final Log LOGGER = LogFactory.getLog(CrawlerSK.class);
 
   private static final String START_URL = "http://www.skdutyfree.com/dutyfree/brand/brandMain";
@@ -30,11 +31,16 @@ public class CrawlerSK extends BaseCrawler implements Crawler {
   private static final String URL_PATTERN_ITEM = "http://www.skdutyfree.com/dutyfree/goods/detail/{0}/view.do";
 
   @Override
-  public List<String> getCategories() {
+  public String getSource() {
+    return Constants.SK_SOURCE;
+  }
+
+  @Override
+  public Collection<String> readCategories() {
     try {
       Document doc = Jsoup.connect(START_URL).get();
       Elements elements = doc.select(".brd_slist a");
-      List<String> brands = new ArrayList<String>();
+      Set<String> brands = new HashSet<String>();
       for (Element e : elements) {
         String[] ids = StringUtils.substringsBetween(e.attr("onclick"), "'", "'");
         if (ids != null && ids.length > 0) {
@@ -49,69 +55,58 @@ public class CrawlerSK extends BaseCrawler implements Crawler {
   }
 
   @Override
-  public void getItemsDetail() {
-    List<Item> items = itemDAO.getItemsNeedToUpdate(getSource(), DEFAULT_SIZE);
-    if (items == null || items.isEmpty()) {
-      return;
-    }
-
-    for (Item item : items) {
-      String itemId = item.getItemId();
-      String link = buildURL(URL_PATTERN_ITEM, itemId);
-      try {
-        Document doc = Jsoup.connect(link).get();
-        Elements elements = doc.select(".prod_main_info .txt_info");
-        if (elements.size() != 1) {
-          return;
-        }
-
-        Element itemInfo = elements.get(0);
-        String cat1 = doc.select("#slctOneDepthCategory option[selected]").text().trim();
-        String cat2 = doc.select("#slctTwoDepthCategory option[selected]").text().trim();
-        String brandName = itemInfo.select("dd:eq(1)").get(0).text().trim();
-        String title = itemInfo.select(".pname").text().trim();
-        String price = "";
-        elements = itemInfo.select(".price dd");
-        for (Element e : elements) {
-          if (e.select("del").size() > 0 || "innetCostBtn".equals(e.attr("id"))) {
-            continue;
-          }
-
-          price = e.text();
-        }
-        price = StringUtils.substringBefore(price, "(").trim();
-        String media = doc.select(".prod_main_info .img_info #prod_img img").attr("src");
-        submitItemDetail(cat1, cat2, brandName, title, price, link, media);
-        itemDAO.updateStatus(item.getId());
-      } catch (Exception e) {
-        LOGGER.error("Error on get item detail: " + link, e);
+  public void retrieveItemDetails(final Item item) {
+    String itemId = item.getItemId();
+    String link = buildURL(URL_PATTERN_ITEM, itemId);
+    try {
+      Document doc = Jsoup.connect(link).get();
+      Elements elements = doc.select(".prod_main_info .txt_info");
+      if (elements.size() != 1) {
+        return;
       }
+
+      Element itemInfo = elements.get(0);
+      String cat1 = doc.select("#slctOneDepthCategory option[selected]").text().trim();
+      String cat2 = doc.select("#slctTwoDepthCategory option[selected]").text().trim();
+      String brandName = itemInfo.select("dd:eq(1)").get(0).text().trim();
+      String title = itemInfo.select(".pname").get(0).text().trim();
+      String price = "";
+      elements = itemInfo.select(".price dd");
+      for (Element e : elements) {
+        if (e.select("del").size() > 0 || "innetCostBtn".equals(e.attr("id"))) {
+          continue;
+        }
+
+        price = e.text();
+      }
+      price = StringUtils.substringBefore(price, "(").trim();
+      String media = doc.select(".prod_main_info .img_info #prod_img img").attr("src");
+
+      submitItemDetail(cat1, cat2, brandName, title, price, link, media);
+      itemDAO.updateStatus(item.getId());
+    } catch (Exception e) {
+      LOGGER.error("Error on get item detail: " + link, e);
     }
   }
 
   @Override
-  public List<String> getItemsOnCategory(final Category cat) {
+  public Collection<String> retrieveItemIds(final Category cat) {
     String link = buildURL(URL_PATTERN_CATEGORY, cat.getBrandId());
     try {
       Document doc = Jsoup.connect(link).get();
       Elements elements = doc.select("#divGoodImg .prod_name a");
-      List<String> items = new ArrayList<String>();
+      Set<String> itemIds = new HashSet<String>();
       for (Element e : elements) {
         String id = StringUtils.substringBetween(e.attr("onclick"), "('", "')");
         if (id != null) {
-          items.add(id);
+          itemIds.add(id);
         }
       }
-      return items;
+      return itemIds;
     } catch (Exception e) {
       LOGGER.error("Error on get items from: " + link, e);
     }
     return null;
-  }
-
-  @Override
-  public String getSource() {
-    return Constants.SK_SOURCE;
   }
 
 }

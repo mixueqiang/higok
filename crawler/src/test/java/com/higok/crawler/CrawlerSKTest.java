@@ -1,6 +1,5 @@
 package com.higok.crawler;
 
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,19 +19,14 @@ public class CrawlerSKTest {
   @Autowired
   protected CrawlerSK crawlerSK;
 
-  @Ignore
-  public void testGetAndSaveCategories() {
-    crawlerSK.getAndSaveCategories();
+  @Test
+  public void testGetCategories() {
+    crawlerSK.retrieveCategories();
   }
 
   @Test
-  public void testGetAndSaveItems() {
-    crawlerSK.getAndSaveItems();
-  }
-
-  @Test
-  public void testGetItemsDetail() {
-    crawlerSK.getItemsDetail();
+  public void testGetItems() {
+    crawlerSK.retrieveItems();
   }
 
 }
