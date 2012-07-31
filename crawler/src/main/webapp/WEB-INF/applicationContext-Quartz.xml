@@ -3,21 +3,21 @@
   xsi:schemaLocation="
             http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
 
-  <bean id="crawlerSK" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+  <bean id="crawlerSKJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
     <property name="targetObject" ref="crawlerSK" />
     <property name="targetMethod" value="retrieveItems" />
     <property name="concurrent" value="true" />
   </bean>
-  <bean id="crawlerSK_trigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
-    <property name="jobDetail" ref="crawlerSK" />
-    <property name="startDelay" value="60000" />
+  <bean id="crawlerSKTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+    <property name="jobDetail" ref="crawlerSKJob" />
+    <property name="startDelay" value="30000" />
     <property name="repeatInterval" value="60000" />
   </bean>
 
   <bean id="schedulerFactory" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
     <property name="triggers">
       <list>
-        <ref bean="crawlerSK_trigger" />
+        <ref bean="crawlerSKTrigger" />
       </list>
     </property>
   </bean>

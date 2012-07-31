@@ -135,8 +135,10 @@ public abstract class BaseDFSCrawler implements Crawler {
         for (String item : items) {
           itemDAO.addIfNotExist(getSource(), item);
         }
-        categoryDAO.updateStatus(cat.getId());
+      } else {
+        LOGGER.warn("Get no itemIds from category " + cat);
       }
+      categoryDAO.updateStatus(cat.getId());
     }
     return added;
   }

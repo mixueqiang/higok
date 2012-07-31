@@ -9,9 +9,9 @@
   </appender>
 
   <appender name="FILEOUT" class="ch.qos.logback.core.rolling.RollingFileAppender">
-    <file>logs/crawler.log</file>
+    <file>/home/mixueqiang/logs/crawler.log</file>
     <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-      <fileNamePattern>logs/crawler.log.%d{yyyy-MM-dd}.log</fileNamePattern>
+      <fileNamePattern>/home/mixueqiang/logs/crawler.log.%d{yyyy-MM-dd}.log</fileNamePattern>
       <maxHistory>30</maxHistory>
     </rollingPolicy>
     <layout class="ch.qos.logback.classic.PatternLayout">
