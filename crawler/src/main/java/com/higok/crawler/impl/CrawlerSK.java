@@ -61,28 +61,28 @@ public class CrawlerSK extends BaseDFSCrawler implements Crawler {
     try {
       Document doc = Jsoup.connect(link).get();
       Elements elements = doc.select(".prod_main_info .txt_info");
-      if (elements.size() != 1) {
-        return;
-      }
+      if (elements.size() == 1) {
+        Element itemInfo = elements.get(0);
+        String cat1 = doc.select("#slctOneDepthCategory option[selected]").text().trim();
+        String cat2 = doc.select("#slctTwoDepthCategory option[selected]").text().trim();
+        String brandName = itemInfo.select("dd:eq(1)").get(0).text().trim();
+        String title = itemInfo.select(".pname").get(0).text().trim();
+        String price = "";
+        elements = itemInfo.select(".price dd");
+        for (Element e : elements) {
+          if (e.select("del").size() > 0 || "innetCostBtn".equals(e.attr("id"))) {
+            continue;
+          }
 
-      Element itemInfo = elements.get(0);
-      String cat1 = doc.select("#slctOneDepthCategory option[selected]").text().trim();
-      String cat2 = doc.select("#slctTwoDepthCategory option[selected]").text().trim();
-      String brandName = itemInfo.select("dd:eq(1)").get(0).text().trim();
-      String title = itemInfo.select(".pname").get(0).text().trim();
-      String price = "";
-      elements = itemInfo.select(".price dd");
-      for (Element e : elements) {
-        if (e.select("del").size() > 0 || "innetCostBtn".equals(e.attr("id"))) {
-          continue;
+          price = e.text();
         }
+        price = StringUtils.substringBefore(price, "(").trim();
+        String media = doc.select(".prod_main_info .img_info #prod_img img").attr("src");
 
-        price = e.text();
+        submitItemDetail(cat1, cat2, brandName, title, price, link, media);
+      } else { // 不可用的商品详情页面。
+        LOGGER.error("No available item detail page found: " + link);
       }
-      price = StringUtils.substringBefore(price, "(").trim();
-      String media = doc.select(".prod_main_info .img_info #prod_img img").attr("src");
-
-      submitItemDetail(cat1, cat2, brandName, title, price, link, media);
       itemDAO.updateStatus(item.getId());
     } catch (Exception e) {
       LOGGER.error("Error on get item detail: " + link, e);
