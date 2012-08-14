@@ -28,9 +28,17 @@ public class ItemDAOImpl extends BaseDAO implements ItemDAO {
   }
 
   @Override
-  public List<Item> getItemsNeedToUpdate(final String source, final int size) {
+  public List<Item> getItemsNeedToCrawl(final String source, final int size) {
     List<Item> items = jdbcTemplate.query(
         "SELECT * FROM items WHERE source = ? AND status = 1 ORDER BY updated_date, id limit 0, ?", new Object[] {
+            source, size }, RowMapperUtil.ITEM_ROW_MAPPER);
+    return items;
+  }
+
+  @Override
+  public List<Item> getItemsNeedToUpdate(final String source, final int size) {
+    List<Item> items = jdbcTemplate.query(
+        "SELECT * FROM items WHERE source = ? AND status = 0 ORDER BY updated_date, id limit 0, ?", new Object[] {
             source, size }, RowMapperUtil.ITEM_ROW_MAPPER);
     return items;
   }

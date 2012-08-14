@@ -70,11 +70,11 @@ public class CrawlerSK extends BaseDFSCrawler implements Crawler {
         String price = "";
         elements = itemInfo.select(".price dd");
         for (Element e : elements) {
-          if (e.select("del").size() > 0 || "innetCostBtn".equals(e.attr("id"))) {
+          if (e.select("del").size() > 0 || "innetCostBtn".equals(e.attr("id")) || "-".equals(e.text().trim())) {
             continue;
           }
 
-          price = e.text();
+          price = e.text().trim();
         }
         price = StringUtils.substringBefore(price, "(").trim();
         String media = doc.select(".prod_main_info .img_info #prod_img img").attr("src");
@@ -107,6 +107,35 @@ public class CrawlerSK extends BaseDFSCrawler implements Crawler {
       LOGGER.error("Error on get items from: " + link, e);
     }
     return null;
+  }
+
+  @Override
+  public void updateItemDetails(Item item) {
+    String itemId = item.getItemId();
+    String link = buildURL(URL_PATTERN_ITEM, itemId);
+    try {
+      Document doc = Jsoup.connect(link).get();
+      Elements elements = doc.select(".prod_main_info .txt_info");
+      if (elements.size() == 1) {
+        Element itemInfo = elements.get(0);
+        String price = "";
+        elements = itemInfo.select(".price dd");
+        for (Element e : elements) {
+          if (e.select("del").size() > 0 || "innetCostBtn".equals(e.attr("id")) || "-".equals(e.text().trim())) {
+            continue;
+          }
+
+          price = e.text().trim();
+        }
+        price = StringUtils.substringBefore(price, "(").trim();
+        // submitItemDetail(link, price);
+      } else { // 不可用的商品详情页面。
+        LOGGER.error("No available item detail page found: " + link);
+      }
+      itemDAO.updateStatus(item.getId());
+    } catch (Exception e) {
+      LOGGER.error("Error on update item detail: " + link, e);
+    }
   }
 
 }

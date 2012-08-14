@@ -99,4 +99,9 @@ public class CrawlerLotte extends BaseDFSCrawler implements Crawler {
     return null;
   }
 
+  @Override
+  public void updateItemDetails(Item item) {
+    // TODO Auto-generated method stub
+  }
+
 }

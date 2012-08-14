@@ -12,6 +12,8 @@ public interface ItemDAO {
 
   void addIfNotExist(String source, String itemId);
 
+  List<Item> getItemsNeedToCrawl(String source, int size);
+
   List<Item> getItemsNeedToUpdate(String source, int size);
 
   void updateStatus(long itemId);

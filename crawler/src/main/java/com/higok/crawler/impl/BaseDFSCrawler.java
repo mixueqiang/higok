@@ -46,6 +46,36 @@ public abstract class BaseDFSCrawler implements Crawler {
   /**
    * 向Higok.com提交数据。
    */
+  protected static boolean submitItemDetail(String url, String price) {
+    HttpClient httpclient = new DefaultHttpClient();
+    HttpParams params = httpclient.getParams();
+    HttpConnectionParams.setConnectionTimeout(params, 10000);
+    HttpConnectionParams.setSoTimeout(params, 10000);
+
+    HttpPost httpPost = new HttpPost(Constants.URL_UPDATE_ITEM);
+    List<BasicNameValuePair> nameValuePairs = new ArrayList<BasicNameValuePair>(2);
+    nameValuePairs.add(new BasicNameValuePair("url", url));
+    nameValuePairs.add(new BasicNameValuePair("price", price));
+
+    try {
+      httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs, "UTF-8"));
+      HttpResponse httpResponse = httpclient.execute(httpPost);
+      if (httpResponse.getStatusLine().getStatusCode() == 200) {
+        String response = EntityUtils.toString(httpResponse.getEntity());
+        Map<String, String> resp = new Gson().fromJson(response, TypeUtils.MAP_STRING_STRING);
+        if ("Y".equals(resp.get("status"))) {
+          return true;
+        }
+      }
+    } catch (Exception e) {
+      LOGGER.error("Submit Item detail error: " + url, e);
+    }
+    return false;
+  }
+
+  /**
+   * 向Higok.com提交数据。
+   */
   protected static boolean submitItemDetail(String cat1, String cat2, String brandName, String title, String price,
       String url, String media) {
     HttpClient httpclient = new DefaultHttpClient();
@@ -87,6 +117,8 @@ public abstract class BaseDFSCrawler implements Crawler {
   @Autowired
   protected ItemDAO itemDAO;
 
+  public abstract Collection<String> readCategories();
+
   @Override
   public void retrieveCategories() {
     Collection<String> brands = readCategories();
@@ -99,9 +131,13 @@ public abstract class BaseDFSCrawler implements Crawler {
     }
   }
 
+  public abstract void retrieveItemDetails(Item item);
+
+  public abstract Collection<String> retrieveItemIds(Category cat);
+
   @Override
   public void retrieveItems() {
-    List<Item> items = itemDAO.getItemsNeedToUpdate(getSource(), SIZE_MEDIUM);
+    List<Item> items = itemDAO.getItemsNeedToCrawl(getSource(), SIZE_MEDIUM);
     if (items == null || items.isEmpty()) {
       // 当数据库中已经没有新的itemId时，执行抓取itemId的任务。
       retrieveNewItemIds();
@@ -112,12 +148,6 @@ public abstract class BaseDFSCrawler implements Crawler {
       retrieveItemDetails(item);
     }
   }
-
-  public abstract Collection<String> readCategories();
-
-  public abstract void retrieveItemDetails(Item item);
-
-  public abstract Collection<String> retrieveItemIds(Category cat);
 
   private boolean retrieveNewItemIds() {
     List<Category> cats = categoryDAO.getCategoriesNeedToUpdated(getSource(), SIZE_SMALL);
@@ -141,5 +171,19 @@ public abstract class BaseDFSCrawler implements Crawler {
       categoryDAO.updateStatus(cat.getId());
     }
     return added;
+  }
+
+  public abstract void updateItemDetails(Item item);
+
+  @Override
+  public void updateItems() {
+    List<Item> items = itemDAO.getItemsNeedToUpdate(getSource(), SIZE_MEDIUM);
+    if (items == null || items.isEmpty()) {
+      return;
+    }
+
+    for (Item item : items) {
+      updateItemDetails(item);
+    }
   }
 }

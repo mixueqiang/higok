@@ -25,8 +25,13 @@ public class CrawlerSKTest {
   }
 
   @Test
-  public void testGetItems() {
+  public void testRetrieveItems() {
     crawlerSK.retrieveItems();
+  }
+
+  @Test
+  public void testUpdateItems() {
+    crawlerSK.updateItems();
   }
 
 }

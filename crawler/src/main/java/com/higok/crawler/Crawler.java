@@ -6,6 +6,16 @@ package com.higok.crawler;
  */
 public interface Crawler {
 
+  /**
+   * 该爬虫负责爬取的来源
+   * 
+   * @return 网站名称、简称等。
+   */
+  String getSource();
+
+  /**
+   * 抓取商品类别。
+   */
   void retrieveCategories();
 
   /**
@@ -14,10 +24,8 @@ public interface Crawler {
   void retrieveItems();
 
   /**
-   * 该爬虫负责爬取的来源
-   * 
-   * @return 网站名称、简称等。
+   * 更新商品信息，主要是商品的价格和商品的标签。
    */
-  String getSource();
+  void updateItems();
 
 }
