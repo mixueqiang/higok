@@ -79,7 +79,7 @@ public class CrawlerSK extends BaseDFSCrawler implements Crawler {
         price = StringUtils.substringBefore(price, "(").trim();
         String media = doc.select(".prod_main_info .img_info #prod_img img").attr("src");
 
-        submitItemDetail(cat1, cat2, brandName, title, price, link, media);
+        publishItem(cat1, cat2, brandName, title, price, link, media);
       } else { // 不可用的商品详情页面。
         LOGGER.error("No available item detail page found: " + link);
       }
@@ -128,7 +128,7 @@ public class CrawlerSK extends BaseDFSCrawler implements Crawler {
           price = e.text().trim();
         }
         price = StringUtils.substringBefore(price, "(").trim();
-        // submitItemDetail(link, price);
+        updateItem(link, price);
       } else { // 不可用的商品详情页面。
         LOGGER.error("No available item detail page found: " + link);
       }

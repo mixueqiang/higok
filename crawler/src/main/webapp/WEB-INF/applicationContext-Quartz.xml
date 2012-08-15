@@ -13,11 +13,22 @@
     <property name="startDelay" value="30000" />
     <property name="repeatInterval" value="60000" />
   </bean>
+  <bean id="crawlerSKUpdateJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+    <property name="targetObject" ref="crawlerSK" />
+    <property name="targetMethod" value="updateItems" />
+    <property name="concurrent" value="true" />
+  </bean>
+  <bean id="crawlerSKUpdateTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+    <property name="jobDetail" ref="crawlerSKUpdateJob" />
+    <property name="startDelay" value="600000" />
+    <property name="repeatInterval" value="300000" />
+  </bean>
 
   <bean id="schedulerFactory" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
     <property name="triggers">
       <list>
         <ref bean="crawlerSKTrigger" />
+        <ref bean="crawlerSKUpdateTrigger" />
       </list>
     </property>
   </bean>

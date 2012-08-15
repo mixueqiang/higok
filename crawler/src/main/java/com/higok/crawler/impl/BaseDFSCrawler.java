@@ -44,22 +44,30 @@ public abstract class BaseDFSCrawler implements Crawler {
   }
 
   /**
-   * 向Higok.com提交数据。
+   * 向Higok.com提交商品。
    */
-  protected static boolean submitItemDetail(String url, String price) {
+  protected static boolean publishItem(String cat1, String cat2, String brandName, String title, String price,
+      String url, String media) {
     HttpClient httpclient = new DefaultHttpClient();
     HttpParams params = httpclient.getParams();
     HttpConnectionParams.setConnectionTimeout(params, 10000);
     HttpConnectionParams.setSoTimeout(params, 10000);
 
-    HttpPost httpPost = new HttpPost(Constants.URL_UPDATE_ITEM);
-    List<BasicNameValuePair> nameValuePairs = new ArrayList<BasicNameValuePair>(2);
+    HttpPost httpPost = new HttpPost(Constants.API_ITEM_PUBLISH);
+    List<BasicNameValuePair> nameValuePairs = new ArrayList<BasicNameValuePair>(7);
+    nameValuePairs.add(new BasicNameValuePair("cat1", cat1));
+    nameValuePairs.add(new BasicNameValuePair("cat2", cat2));
+    nameValuePairs.add(new BasicNameValuePair("brand_name", brandName));
+    nameValuePairs.add(new BasicNameValuePair("title", title));
     nameValuePairs.add(new BasicNameValuePair("url", url));
     nameValuePairs.add(new BasicNameValuePair("price", price));
+    nameValuePairs.add(new BasicNameValuePair("media", media));
 
     try {
+      // TODO 这里设置的编码格式可能需要根据网站不同有所调整。
       httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs, "UTF-8"));
       HttpResponse httpResponse = httpclient.execute(httpPost);
+
       if (httpResponse.getStatusLine().getStatusCode() == 200) {
         String response = EntityUtils.toString(httpResponse.getEntity());
         Map<String, String> resp = new Gson().fromJson(response, TypeUtils.MAP_STRING_STRING);
@@ -74,30 +82,22 @@ public abstract class BaseDFSCrawler implements Crawler {
   }
 
   /**
-   * 向Higok.com提交数据。
+   * 更新商品信息。
    */
-  protected static boolean submitItemDetail(String cat1, String cat2, String brandName, String title, String price,
-      String url, String media) {
+  protected static boolean updateItem(String url, String price) {
     HttpClient httpclient = new DefaultHttpClient();
     HttpParams params = httpclient.getParams();
     HttpConnectionParams.setConnectionTimeout(params, 10000);
     HttpConnectionParams.setSoTimeout(params, 10000);
 
-    HttpPost httpPost = new HttpPost(Constants.URL_SUBMIT_ITEM);
-    List<BasicNameValuePair> nameValuePairs = new ArrayList<BasicNameValuePair>(7);
-    nameValuePairs.add(new BasicNameValuePair("cat1", cat1));
-    nameValuePairs.add(new BasicNameValuePair("cat2", cat2));
-    nameValuePairs.add(new BasicNameValuePair("brand_name", brandName));
-    nameValuePairs.add(new BasicNameValuePair("title", title));
-    nameValuePairs.add(new BasicNameValuePair("price", price));
+    HttpPost httpPost = new HttpPost(Constants.API_ITEM_UPDATE);
+    List<BasicNameValuePair> nameValuePairs = new ArrayList<BasicNameValuePair>(2);
     nameValuePairs.add(new BasicNameValuePair("url", url));
-    nameValuePairs.add(new BasicNameValuePair("media", media));
+    nameValuePairs.add(new BasicNameValuePair("price", price));
 
     try {
-      // TODO 这里设置的编码格式可能需要根据网站不同有所调整。
       httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs, "UTF-8"));
       HttpResponse httpResponse = httpclient.execute(httpPost);
-
       if (httpResponse.getStatusLine().getStatusCode() == 200) {
         String response = EntityUtils.toString(httpResponse.getEntity());
         Map<String, String> resp = new Gson().fromJson(response, TypeUtils.MAP_STRING_STRING);

@@ -72,7 +72,7 @@ public class CrawlerLotte extends BaseDFSCrawler implements Crawler {
       String price = doc.select("#id_sale_price_s").get(0).text().trim();
       String media = doc.select("#ProdPhoto2").get(0).text().trim();
 
-      submitItemDetail(cats[0], cats[1], brandName, title, price, link, media);
+      publishItem(cats[0], cats[1], brandName, title, price, link, media);
       itemDAO.updateStatus(item.getId());
     } catch (Exception e) {
       LOGGER.error("Error on get item detail: " + link, e);
