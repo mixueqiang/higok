@@ -20,8 +20,8 @@
   </bean>
   <bean id="crawlerSKUpdateTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
     <property name="jobDetail" ref="crawlerSKUpdateJob" />
-    <property name="startDelay" value="600000" />
-    <property name="repeatInterval" value="300000" />
+    <property name="startDelay" value="60000" />
+    <property name="repeatInterval" value="60000" />
   </bean>
 
   <bean id="schedulerFactory" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
